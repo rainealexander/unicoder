@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -39,6 +40,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './client/index.html'
+    }),
+    new webpack.DefinePlugin({
+      'process.env.REACT_APP_AUTH0_DOMAIN': JSON.stringify(process.env.REACT_APP_AUTH0_DOMAIN),
+      'process.env.REACT_APP_AUTH0_ID': JSON.stringify(process.env.REACT_APP_AUTH0_ID)
     })
   ]
 };

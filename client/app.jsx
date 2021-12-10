@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
+import { Link, Outlet } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,8 +10,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <h1>UnicodeR</h1>
-    )
+      <div className="container">
+        <nav>
+          <h1>UnicodeR</h1>
+          <Link to="/dashboard">Dashboard</Link> | {" "}
+          <Link to="/preferences">Preferences</Link>
+        </nav>
+        <Outlet />
+      </div>
+    );
   }
 }
 
