@@ -1,3 +1,13 @@
 .component {
   padding: 22px;
 }
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+td {
+  font-size: 1.5rm;
+  border: 1px solid black;
+}
