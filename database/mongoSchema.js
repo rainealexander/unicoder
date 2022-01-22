@@ -17,6 +17,7 @@ module.exports.unicodeDataSchema = new Schema({
   simple_titlecase_mapping: String
 });
 
+// user data currently not used
 module.exports.userDataSchema = new Schema({
   email: { type: String, required: true },
   categories: [ String ],
