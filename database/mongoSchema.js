@@ -8,14 +8,16 @@ module.exports.unicodeDataSchema = new Schema({
   canonical_combining_class: String,
   bidi_class: String,
   decomposition: String,
-  numeric_value_1: String,
-  numeric_value_2: String,
-  numeric_value_3: String,
+  num_val_1: String,
+  num_val_2: String,
+  num_val_3: String,
   bidi_mirrored: String,
+  unicode_1_name: String,
+  iso_comment: String,
   simple_uppercase_mapping: String,
   simple_lowercase_mapping: String,
   simple_titlecase_mapping: String
-});
+}, { collection: 'no_control'});
 
 // user data currently not used
 module.exports.userDataSchema = new Schema({

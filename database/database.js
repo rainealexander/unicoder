@@ -8,3 +8,4 @@ const connection = mongoose.connection;
 
 connection.on('error', (error) => { console.error('DB conection error: ', error)});
 
+const UnicodeData = new mongoose.model('UnicodeData', unicodeDataSchema);
